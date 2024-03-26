@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  animation: bodyfadein 2s ease-in-out forwards;
+}
+.prime-logo-img {
+  width: 33vw;
+  position: fixed;
+  top: 40vh;
+  left: 34vw;
+  cursor: pointer;
+  animation: loading 1s ease-in-out 1s forwards;
+  z-index: 1;
+  transition: transform 0.25s;
+}
+.prime-logo-img:hover {
+  transform: scale(1.33);
+}
+.load-container {
+  display: flex;
+  justify-content: center;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  margin-top: 650px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.25s linear forwards;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 128px;
+  z-index: 0;
+  background-color: rgb(59, 109, 138);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hdr-e-btn {
+margin-right: 144px;
+font-size: 20px;
+font-family: arial;
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 8px;
+padding-bottom: 8px;
+background-color: transparent;
+border: solid rgba(0, 0, 0, 0) 1px;
+border-radius: 4px;
+transition: transform 0.33s,
+color 0.15s,
+border-color 0.15s,
+background-color 0.2s;
+cursor: pointer;
+}
+.hdr-e-btn:hover {
+  transform: scale(1.05);
+  color: rgb(46, 100, 161);
+  border-color: rgb(46, 100, 161);
+  background-color: rgb(3, 17, 32);
+}
+
+
+/*KEYFRAMES*/
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); opacity: 0; }
+  33% { opacity: 1;}
+  90% { opacity: 1;}
+  100% { transform: rotate(360deg); opacity: 0; }
+}
+
+@keyframes loading {
+  0% {
+    transform: 0px 0px;
+  }
+  100% {
+    left: -200px;
+    top: -36px;
+    transform: scale(0.25);
+  }
+}
+@keyframes currentlyloading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.33;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bodyfadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
